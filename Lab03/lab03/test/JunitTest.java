@@ -72,6 +72,7 @@ public class JunitTest extends TestCase {
     }
     public void testSqrProcessor() {
         Processor sqrProcessor = new SqrProcessor();
+        assertTrue(sqrProcessor.process(0)== 0);
         assertTrue(sqrProcessor.process(1)== 1);
         assertTrue(sqrProcessor.process(2)== 4);
         assertTrue(sqrProcessor.process(3)== 9);
