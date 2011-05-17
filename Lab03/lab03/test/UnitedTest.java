@@ -25,6 +25,8 @@ public class UnitedTest {
         
         TestRunner testRunner = new TestRunner();
         TestSuite testSuite = new TestSuite();
+        testSuite.addTest(new JunitTest("testEmptyArray"));
+        testSuite.addTest(new JunitTest("testOneElement"));        
         testSuite.addTest(new JunitTest("testEvenSelector"));
         testSuite.addTest(new JunitTest("testOddSelector"));
         testSuite.addTest(new JunitTest("testDivisionProcessor"));
