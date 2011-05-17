@@ -17,6 +17,26 @@ public class JunitTest extends TestCase {
     public JunitTest(String testName) {
         super(testName);
     }
+    public void testEmptyArray() {
+        List<Integer> massiv = Arrays.asList();
+        Selector evenSelector = new EvenSelector(new Select());
+        evenSelector.setIterator(massiv.iterator());
+        assertTrue(evenSelector.hasNext()== false);
+        Selector oddSelector = new OddSelector(new Select());
+        oddSelector.setIterator(massiv.iterator());
+        assertTrue(oddSelector.hasNext()== false);
+    }
+    public void testOneElement() {
+        List<Integer> massiv = Arrays.asList(1);
+        Selector evenSelector = new EvenSelector(new Select());
+        evenSelector.setIterator(massiv.iterator());
+        assertTrue(evenSelector.hasNext()== false);
+        Selector oddSelector = new OddSelector(new Select());
+        oddSelector.setIterator(massiv.iterator());
+        assertTrue(oddSelector.hasNext()== true);
+        assertTrue(oddSelector.next() == 1);
+        assertTrue(oddSelector.hasNext()== false);
+    }    
     public void testEvenSelector(){
         List<Integer> massiv = Arrays.asList(1,2,3,4,5,6);
         Selector evenSelector = new EvenSelector(new Select());
