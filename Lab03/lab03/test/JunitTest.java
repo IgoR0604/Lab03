@@ -40,7 +40,7 @@ public class JunitTest extends TestCase {
     public void testEvenSelector(){
         List<Integer> array = Arrays.asList(1,2,3,4,5,6);
         Selector evenSelector = new EvenSelector(new Select());
-        evenSelector.setIterator(massiv.iterator());
+        evenSelector.setIterator(array.iterator());
         assertTrue(evenSelector.hasNext()== true);
         assertTrue(evenSelector.next() == 2);
         assertTrue(evenSelector.hasNext()== true);
