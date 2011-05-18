@@ -18,27 +18,27 @@ public class JunitTest extends TestCase {
         super(testName);
     }
     public void testEmptyArray() {
-        List<Integer> massiv = Arrays.asList();
+        List<Integer> array = Arrays.asList();
         Selector evenSelector = new EvenSelector(new Select());
-        evenSelector.setIterator(massiv.iterator());
+        evenSelector.setIterator(array.iterator());
         assertTrue(evenSelector.hasNext()== false);
         Selector oddSelector = new OddSelector(new Select());
-        oddSelector.setIterator(massiv.iterator());
+        oddSelector.setIterator(array.iterator());
         assertTrue(oddSelector.hasNext()== false);
     }
     public void testOneElement() {
-        List<Integer> massiv = Arrays.asList(1);
+        List<Integer> array = Arrays.asList(1);
         Selector evenSelector = new EvenSelector(new Select());
-        evenSelector.setIterator(massiv.iterator());
+        evenSelector.setIterator(array.iterator());
         assertTrue(evenSelector.hasNext()== false);
         Selector oddSelector = new OddSelector(new Select());
-        oddSelector.setIterator(massiv.iterator());
+        oddSelector.setIterator(array.iterator());
         assertTrue(oddSelector.hasNext()== true);
         assertTrue(oddSelector.next() == 1);
         assertTrue(oddSelector.hasNext()== false);
     }    
     public void testEvenSelector(){
-        List<Integer> massiv = Arrays.asList(1,2,3,4,5,6);
+        List<Integer> array = Arrays.asList(1,2,3,4,5,6);
         Selector evenSelector = new EvenSelector(new Select());
         evenSelector.setIterator(massiv.iterator());
         assertTrue(evenSelector.hasNext()== true);
@@ -50,9 +50,9 @@ public class JunitTest extends TestCase {
         assertTrue(evenSelector.hasNext()== false);
     }
     public void testOddSelector(){
-        List<Integer> massiv = Arrays.asList(1,2,3,4,5,6);
+        List<Integer> array = Arrays.asList(1,2,3,4,5,6);
         Selector oddSelector = new OddSelector(new Select());
-        oddSelector.setIterator(massiv.iterator());
+        oddSelector.setIterator(array.iterator());
         assertTrue(oddSelector.hasNext()== true);
         assertTrue(oddSelector.next() == 1);
         assertTrue(oddSelector.hasNext()== true);
