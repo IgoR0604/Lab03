@@ -17,7 +17,7 @@ public class ArrayHolder {
     }
     
     public List<Integer> getData() {
-        return data;
+        return new ArrayList<Integer>(data);
     }
     public void setFormatter(Formatter formatter) {
         this.formatter = formatter;
